@@ -6,7 +6,7 @@ info:
   description: Protogen API, implemented with OpenAPI Codegen
 
 paths:
-  /cars:
+  /api/cars:
     post:
       summary: Creates a car
       operationId: createCar
