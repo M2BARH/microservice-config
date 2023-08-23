@@ -33,6 +33,27 @@ paths:
                 items:
                   $ref: '#/components/schemas/CarDTO'
 
+  /cars/id/{id}:
+    get:
+      summary: Retrieve a car by id number
+      operationId: getCarById
+      parameters:
+        - name: id
+          in: path
+          description: id number of a car to retrieve
+          required: true
+          schema:
+            type: long
+      responses:
+        '200':
+          description: Retrieve success response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CarDTO'
+        '404':
+          description: Car not found
+
   /cars/vin/{vin}:
     get:
       summary: Retrieve a car by vin number
@@ -164,6 +185,8 @@ components:
     CarDTO:
       type: object
       properties:
+        id:
+          type: long
         vin:
           type: string
         make:
