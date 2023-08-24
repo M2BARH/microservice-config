@@ -33,12 +33,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/CarDTO'
 
-  /cars/id/{id}:
+  /cars/id/{carId}:
     get:
       summary: Retrieve a car by id number
       operationId: getCarById
       parameters:
-        - name: id
+        - name: carId
           in: path
           description: id number of a car to retrieve
           required: true
@@ -185,7 +185,7 @@ components:
     CarDTO:
       type: object
       properties:
-        id:
+        carId:
           type: long
         vin:
           type: string
