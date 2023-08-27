@@ -95,12 +95,6 @@ paths:
       summary: Retrieve reservations by search query
       operationId: searchReservation
       parameters:
-        - name: id
-          in: query
-          description: id of a reservation to search
-          required: false
-          schema:
-            type: long
         - name: userId
           in: query
           description: id of a user to search
