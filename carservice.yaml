@@ -88,6 +88,8 @@ paths:
       response:
         '204':
           description: Car removed successfully
+        '404':
+          description: Car not found
 
     put:
       summary: update a car by vin number
