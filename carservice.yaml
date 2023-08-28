@@ -187,7 +187,7 @@ paths:
       summary: Retrieve cars by search query
       operationId: searchCar
       parameters:
-        - name: carId
+        - name: id
           in: query
           description: id of a car to search
           required: false
