@@ -152,7 +152,7 @@ components:
           type: long
         userId:
           type: long
-        cardId:
+        carId:
           type: long
         fromDate:
           type: date
