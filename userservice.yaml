@@ -143,21 +143,32 @@ paths:
         '404':
           description: User not found
 
-  /users/login:
+  /login/users:
     post:
       summary: login a user
       operationId: login
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/UserDTO'
+      parameters:
+        - name: password
+          in: query
+          description: password of a user to login
+          required: true
+          schema:
+            type: string
+        - name: username
+          in: query
+          description: username of a user to login
+          required: true
+          schema:
+            type: string
       responses:
-        '201':
+        '200':
           description: User login successfully
+        '401':
+          description: Unauthorized - Invalid credentials
         '404':
-          description: User login failed
+          description: User not found
+        '500':
+          description: Internal server error
 
 components:
   schemas:
